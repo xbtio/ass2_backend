@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body class="bg-blue-900 text-gray-100">
+    <div class="container mx-auto p-8">
+        <div class="mb-6">
+            <div class="flex items-center border-b border-teal-500 py-2 text-white">
+                <input id="cityInput"
+                    class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none "
+                    type="text" placeholder="Search for cities" aria-label="City">
+                <button id="searchButton"
+                    class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+                    type="button">
+                    Search
+                </button>
+            </div>
+        </div>
+        <div class="lg:flex lg:space-x-4">
+            <div class="mb-4 lg:mb-0 bg-gray-900 p-6 rounded-xl w-full lg:w-1/2 shadow-lg">
+                <div id="currentWeather" class="text-center">
+                </div>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-xl w-full lg:w-1/2 shadow-lg">
+                <h2 class="text-xl font-bold mb-4">7-Day Forecast</h2>
+                <div id="forecast" class="grid grid-cols-2 gap-4">
+                </div>
+            </div>
+        </div>
+        <div class="lg:flex lg:space-x-4 pt-8">
+            <div class="bg-gray-900 p-6 rounded-xl w-full lg:w-1/2 shadow-lg mb-4">
+                <h2 class="text-xl font-bold mb-4">Air Pollution</h2>
+                <div id="airPollution" class="space-y-4">
+                </div>
+            </div>
+            <div class="bg-gray-900 p-6 rounded-xl w-full lg:w-1/2 shadow-lg mb-4">
+                <h2 class="text-xl font-bold mb-4">Location Map</h2>
+                <div id="map" class="h-64">
+                    <script defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_2YSJ_KR2XolIlxk8Jl6MlLTk8ahvzWM&libraries=places"></script>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-gray-900 p-6 rounded-xl w-full shadow-lg mb-4">
+            <h2 class="text-xl font-bold mb-4">Photo of the city</h2>
+            <img src="" alt="" id="cityPhoto" style="width: 100%; height: auto; display: block;  border-radius: 0.5rem">
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
